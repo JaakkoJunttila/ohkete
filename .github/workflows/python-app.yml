@@ -30,7 +30,7 @@ jobs:
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
       - name: Test with pytest
         run: |
-          coverage run -m pytest  
+          coverage run --source=test_postinumerot -m pytest test_postinumerot.py  
       - name: Generate coverage report
         run: |
           coverage report
